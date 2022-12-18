@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    overflow-y: scroll; 
+    font-size: 1.25rem;
+}
+
+html, 
+body {
+    height: 100vh;
+    scroll-behavior: smooth;
+    line-height: 1.5;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    h1 {
+        margin: 10px 20px;
+        flex-grow: 1;
+    }
+    
+    button {
+        margin: 20px;
+        padding: 20px;
+        height: 20px;
+    }
+
+    a {
+        height: 0;
+        text-decoration: none;
+    }
+}
+
+
+
+
+
+
+
+

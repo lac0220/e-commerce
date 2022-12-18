@@ -1,0 +1,30 @@
+form {
+    margin-bottom: 25px;
+    .form {
+        padding: 20px;
+        &-box {
+            padding: 10px 0; 
+            label {  
+                display: inline-block;
+                width: 150px;       
+            }
+
+            span {  
+                display: block;
+                padding: 20px 150px 0;
+                color: red;
+            }
+        
+            input[type=text], 
+            input[type=number],
+            option,
+            select {
+                padding: 5px 10px;
+                border-radius: 5px;
+                outline: none;
+                font-size: 1.2rem;
+                font-family: 'Times New Roman', Times, serif;
+            }
+        }
+    }
+}
