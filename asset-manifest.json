@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/juniortest.laszlo.nemeth.com/static/css/main.ec3d9274.css",
+    "main.js": "/juniortest.laszlo.nemeth.com/static/js/main.4d0488e2.js",
+    "index.html": "/juniortest.laszlo.nemeth.com/index.html",
+    "main.ec3d9274.css.map": "/juniortest.laszlo.nemeth.com/static/css/main.ec3d9274.css.map",
+    "main.4d0488e2.js.map": "/juniortest.laszlo.nemeth.com/static/js/main.4d0488e2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ec3d9274.css",
+    "static/js/main.4d0488e2.js"
+  ]
+}
