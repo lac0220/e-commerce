@@ -1,7 +1,7 @@
 {
   "name": "e-commerce",
   "version": "0.1.0",
-  "homepage": "https://lac0220.github.io/juniortest.laszlo.nemeth.com",
+  "homepage": "https://lac0220.github.io/e-commerce",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",

@@ -67,7 +67,7 @@ export default function ProductAdd() {
         })
         .then(response => {
             
-            navigate("/juniortest.laszlo.nemeth.com");
+            navigate("/e-commerce");
             console.log(response.data)})
         .catch(error => {
             alert("SKU already exist, please add a unique one");
@@ -79,7 +79,7 @@ export default function ProductAdd() {
             <div className="header">
                 <h1>Product Add</h1> 
                 <Button type="submit" variant="contained" color="success" aria-label="Save">Save</Button>  
-                <Link to='/juniortest.laszlo.nemeth.com'>
+                <Link to='/e-commerce'>
                     <Button id="save-product-btn" variant="contained" color="error" aria-label="Cancel">Cancel</Button>
                 </Link>   
             </div>         

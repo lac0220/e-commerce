@@ -59,7 +59,7 @@ export default function Home() {
         <>
             <div className="header">
                 <h1>Product List</h1>
-                <Link to='/juniortest.laszlo.nemeth.com/add-product'>
+                <Link to='/e-commerce/add-product'>
                     <Button variant="contained" color="success" aria-label="Add data">ADD</Button>
                 </Link> 
                 <Button onClick={deleteItem} variant="contained" color="error" aria-label="Delete checkbox">MASS DELETE</Button>

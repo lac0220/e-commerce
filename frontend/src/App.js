@@ -8,8 +8,8 @@ export default function App(){
     return(
         <BrowserRouter>
             <Routes>
-                <Route path='/juniortest.laszlo.nemeth.com' element={ <Home /> } />
-                <Route path='/juniortest.laszlo.nemeth.com/add-product' element={ <ProductAdd />} />                
+                <Route path='/e-commerce' element={ <Home /> } />
+                <Route path='/e-commerce/add-product' element={ <ProductAdd />} />                
             </Routes>
             <Footer/>
         </BrowserRouter>
