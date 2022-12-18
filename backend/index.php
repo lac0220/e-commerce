@@ -3,12 +3,12 @@
 header("Access-Control-Allow-Origin: *");
 
 $host = "localhost"; 
-$user = "root"; 
-$password = ""; 
-$dbname = "e-commerce"; 
-$id = '';
+$user = "id20031721_root"; 
+$password = "L5InIRHzMnutuVcNdn#i"; 
+$dbname = "id20031721_ecommerce"; 
+$id = '0';
  
-$conn = mysqli_connect($host, $user, $password, $dbname, 3307, $id);
+$conn = mysqli_connect($host, $user, $password, $dbname, $id);
   
 if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
