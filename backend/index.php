@@ -2,18 +2,19 @@
 
 header("Access-Control-Allow-Origin: *");
 
+// Credentials on 000webhost Web hosting
 $host = "localhost"; 
-$user = "id20031721_root"; 
-$password = "L5InIRHzMnutuVcNdn#i"; 
-$dbname = "id20031721_ecommerce"; 
-$id = '0';
+$user = ""; 
+$password = ""; 
+$dbname = ""; 
  
-$conn = mysqli_connect($host, $user, $password, $dbname, $id);
+$conn = mysqli_connect($host, $user, $password, $dbname);
   
 if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
+    die("Connection failed: " . mysqli_connect_error());
 }
 
+$id = '';
 $method = $_SERVER['REQUEST_METHOD'];
  
 switch ($method) {
@@ -24,16 +25,7 @@ switch ($method) {
         $sql = "select * from list_items".($id?" where id = $id":''); 
     break;
     case 'POST':
-        if (isset($_GET["sku"])) {
-            $sku = $_GET['sku'];  
-            $name = $_POST["name"];
-            $price = $_POST["price"];
-            $size = $_POST["size"];
-            $height = $_POST["height"];
-            $width = $_POST["width"];
-            $length = $_POST["length"];
-            $weight = $_POST["weight"];
-        } else if (isset($_GET["delete"])) {
+        if (isset($_GET["delete"])) {
             $delete = $_GET['delete'];  
             $sql = "DELETE FROM list_items WHERE id IN ($delete)"; 
         } else {  
@@ -46,7 +38,7 @@ switch ($method) {
             $length = $_POST["length"];
             $weight = $_POST["weight"];
             $sql = "insert into list_items (sku, name, price, size, height, width, length, weight) values ('$sku', '$name', '$price', '$size', '$height', '$width', '$length', '$weight')"; 
-            $duplicate=mysqli_query($conn,"select * from list_items where sku = '$sku'");
+            $duplicate = mysqli_query($conn,"select * from list_items where sku = '$sku'");
             if (mysqli_num_rows($duplicate) > 0) {
                 http_response_code(409);
                 die(mysqli_error($conn));

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 4.9.5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost: 3307
--- Generation Time: Dec 18, 2022 at 10:45 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.1.12
+-- Host: localhost:3306
+-- Generation Time: Jan 08, 2023 at 11:47 AM
+-- Server version: 10.5.16-MariaDB
+-- PHP Version: 7.3.32
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -18,8 +19,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `e-commerce`
+-- Database: `id20031721_ecommerce`
 --
+CREATE DATABASE IF NOT EXISTS `id20031721_ecommerce` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `id20031721_ecommerce`;
 
 -- --------------------------------------------------------
 
@@ -30,46 +33,28 @@ SET time_zone = "+00:00";
 CREATE TABLE `list_items` (
   `id` int(100) NOT NULL,
   `sku` varchar(20) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `price` decimal(20,2) NOT NULL,
-  `size` int(10) NOT NULL,
-  `height` int(10) NOT NULL,
-  `width` int(10) NOT NULL,
-  `length` int(10) NOT NULL,
-  `weight` decimal(20,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+  `name` varchar(20) NOT NULL,
+  `price` varchar(10) NOT NULL,
+  `size` varchar(10) NOT NULL,
+  `height` varchar(10) NOT NULL,
+  `width` varchar(10) NOT NULL,
+  `length` varchar(10) NOT NULL,
+  `weight` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `list_items`
 --
 
 INSERT INTO `list_items` (`id`, `sku`, `name`, `price`, `size`, `height`, `width`, `length`, `weight`) VALUES
-(2371, 'LACI-34-VBGF', 'CD', '13.00', 2, 0, 0, 0, '0.00'),
-(2372, 'DFR-3234-FGGVVD', 'Book', '24.00', 0, 0, 0, 0, '2.00'),
-(2401, 'DFD-4532-AWDD', 'Pinocchio', '29.99', 700, 0, 0, 0, '0.00'),
-(2416, 'iozc-4634-dsaw', 'Chair', '15.49', 0, 50, 87, 79, '0.00'),
-(2418, 'etr-346-tjkk', 'Lion-King', '22.99', 0, 0, 0, 0, '1.20'),
-(2424, '3345-gztr-689', 'Table', '49.99', 0, 70, 60, 120, '0.00'),
-(2465, 'DFR-3234-FGGVVD4', 'hfghfgh', '45.00', 35345, 0, 0, 0, '0.00'),
-(2715, '345354345345', 'fghgfh', '45.00', 0, 0, 0, 0, '56.00'),
-(2716, '67876768', 'ghfghf', '56.00', 54645654, 0, 0, 0, '45.00'),
-(2717, '45435', 'dfgdfgf', '34534.00', 2, 0, 0, 0, '0.00'),
-(2718, '565675', 'hjghjh', '121212121212.00', 1212121212, 0, 0, 0, '0.00'),
-(2723, 'HKH-657-LKO', 'Prince ', '19.99', 1200, 0, 0, 0, '0.00'),
-(2724, '346-BfDa-35678674', 'The Shack', '38.50', 0, 0, 0, 0, '1.82'),
-(2779, '67876768ö', 'hfg', '56.00', 567, 0, 0, 0, '0.00'),
-(2788, '676757', 'gh', '67.00', 57, 0, 0, 0, '0.00'),
-(2790, 'DFR-3234-FGGVVD7', 'gffgh', '5646.00', 465, 0, 0, 0, '0.00'),
-(2795, 'DFR-3234-FGGV', 'gffgh', '5646.00', 465, 0, 0, 0, '0.00'),
-(2810, 'DFR-3234-FGG', 'gffgh', '5646.00', 465, 0, 0, 0, '0.00'),
-(2821, '65646', 'fgh', '5.00', 456, 0, 0, 0, '0.00'),
-(2872, '5654658879', 'hjjghj', '45645.00', 57567, 0, 0, 0, '0.00'),
-(2873, '56546588799', 'hjjghj', '45645.00', 57567, 0, 0, 0, '0.00'),
-(2874, '565465887999', 'hjjghj', '45645.00', 57567, 0, 0, 0, '0.00'),
-(2875, 'DFR-3234-FGGVVD798', 'tzrz', '456.00', 456, 0, 0, 0, '0.00'),
-(2876, 'DFR-3234-FGGVVD7989', 'gdg', '4556.00', 0, 0, 0, 0, '564.00'),
-(2879, '6876868', 'bubuka', '12.00', 0, 0, 0, 0, '45.00');
-
+(2371, 'LACI-34-VBGF', 'CD', '13.00', '2', '0', '0', '0', '0.00'),
+(2372, 'DFR-3234-FGGVVD', 'Book', '24.00', '0', '0', '0', '0', '2.00'),
+(2401, 'DFD-4532-AWDD', 'Pinocchio', '29.99', '700', '0', '0', '0', '0.00'),
+(2416, 'iozc-4634-dsaw', 'Chair', '15.49', '0', '50', '87', '79', '0.00'),
+(2418, 'etr-346-tjkk', 'Lion-King', '22.99', '0', '0', '0', '0', '1.20'),
+(2424, '3345-gztr-689', 'Table', '49.99', '0', '70', '60', '120', '0.00'),
+(2723, 'HKH-657-LKO', 'Prince ', '19.99', '1200', '0', '0', '0', '0.00'),
+(2724, '346-BfDa-35678674', 'The Shack', '38.50', '0', '0', '0', '0', '1.82'),
 --
 -- Indexes for dumped tables
 --
@@ -89,7 +74,7 @@ ALTER TABLE `list_items`
 -- AUTO_INCREMENT for table `list_items`
 --
 ALTER TABLE `list_items`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2882;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2939;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
