@@ -2,20 +2,20 @@ import { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import { Paper, Box, Button } from "@mui/material";
 import axios from 'axios';
-import './Home.scss'; 
-  
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
+import Footer from '../Footer/Footer';
+import './home.scss'; 
+
 export default function Home() {
 
-    const refreshPage = () => { 
-        window.location.reload(); 
-    }
-    
     const [data, setData]= useState([]);
+    const [loading, setLoading] = useState(false);
     const [checkedBox, setCheckedBox]= useState([]);
 
     // Getting data from database
     useEffect(() => {
-        axios.get("http://localhost:8080/e-commerce/backend/index.php") 
+        setLoading(true);
+        axios.get("https://juniortest-laszlo-nemeth.000webhostapp.com/") 
         .then(response => {
             setData(response.data)
             console.log(response.data)})
@@ -23,7 +23,15 @@ export default function Home() {
             alert("The server is temporarily unable to service your request")
             console.log(error)
             })  
-        }, []);
+        .finally(() => {
+            setLoading(false);
+        });
+    }, []);
+
+    // LoadingSpinner while getting the data
+    if (loading) {
+        return <LoadingSpinner />;
+    }
 
     // Setting checkbox    
     const handleCheckBox = (e) => {
@@ -36,13 +44,17 @@ export default function Home() {
         }
     }
 
+    const refreshPage = () => { 
+        window.location.reload(); 
+    }
+
     // Deleting data with checkbox
     const deleteItem = () => {
-        if (checkedBox.length!==0) {
+        if (checkedBox.length !== 0) {
             console.log(checkedBox);
             axios({
                 method: 'post',
-                url: 'http://localhost:8080/e-commerce/backend/index.php/?delete=' + checkedBox,
+                url: 'https://juniortest-laszlo-nemeth.000webhostapp.com/?delete=' + checkedBox,
             })
             .then(response => {
                 console.log(response)
@@ -91,7 +103,7 @@ export default function Home() {
                                                     (<p>Size: {item.size}MB</p>)}
                                                 {(item.weight == 0) ? <><span></span></> : 
                                                     (<p>Weight: {item.weight}KG</p>)}
-                                                {(item.height && item.width && item.length == 0) ? <><span></span></> : 
+                                                {(item.height == 0) || (item.width == 0) || (item.length == 0) ? <><span></span></> : 
                                                     (<p>Dimension: {item.height}x{item.width}x{item.length}</p>)}
                                             </div>
                                         </div>
@@ -102,6 +114,7 @@ export default function Home() {
                     })
                 }          
             </div>
+            <Footer/>
         </>
     );
 }
