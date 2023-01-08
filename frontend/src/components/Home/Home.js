@@ -76,14 +76,14 @@ export default function Home() {
                 </Link> 
                 <Button onClick={deleteItem} variant="contained" color="error" aria-label="Delete checkbox">MASS DELETE</Button>
             </div>
-            <hr></hr>
+            <hr style={{ border: "1px solid rgb(131, 95, 95)" }}></hr>
             <div className="home">
                 {
                     data.map((item, index) => {
                         return (
                             <div key={index} >
-                                <Box sx={{ width: 400}} >
-                                    <Paper elevation={5} style={{margin: "20px 20px 5px"}}> 
+                                <Box sx={{ width: 400 }} >
+                                    <Paper elevation={5} style={{ margin: "20px 20px 5px", backgroundColor:"#F2E3E3" }}> 
                                         <label>
                                             <input 
                                                 className="delete-checkbox" 
@@ -92,7 +92,8 @@ export default function Home() {
                                                 value={item.id} 
                                                 checked={item.checkedBox} 
                                                 onChange={handleCheckBox} 
-                                                /> 
+                                                aria-label="Product checkbox"
+                                            /> 
                                         </label>
                                         <div className="home-box">
                                             <div className="home-box-table">

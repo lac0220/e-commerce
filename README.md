@@ -1,12 +1,12 @@
 # E-commerce
 
-The web app contains two pages:
+The web application contains two pages:
 
 1. Listing all products from the MySQL database
 2. Adding a product with a unique SKU + additional details like name, price, size, height, width, length, weight
 
-The products can be deleted by selecting the checkbox
-The database is on 000webhost Web hosting
+- The products can be deleted by selecting the checkbox
+- The database is hosted on 000webhost with the phpMyAdmin administration tool
 
 ## Tech Stack
 

@@ -90,8 +90,8 @@ export default function ProductAdd() {
                         <Button id="save-product-btn" variant="contained" color="error" aria-label="Cancel">Cancel</Button>
                     </Link>   
                 </div>         
-                <hr></hr>  
-                <Paper elevation={5} style={{margin: "20px"}} className="form" >  
+                <hr style={{ border: "1px solid rgb(131, 95, 95)" }}></hr>
+                <Paper elevation={5} style={{ margin: "20px", backgroundColor:"#F2E3E3" }} className="form" >  
                     <div className="form-box">
                         <label htmlFor="sku">SKU</label>
                         <input 
@@ -153,7 +153,7 @@ export default function ProductAdd() {
                                 onChange={(e) => inputChange(e)} 
                                 required
                             />
-                            <span style={{fontWeight: "900"}}>Please, provide size</span>
+                            <span style={{ fontWeight: "900" }}>Please, provide size</span>
                         </div>
                     )}
                     {select.includes("Book") && (
@@ -168,7 +168,7 @@ export default function ProductAdd() {
                                 step="0.01"
                                 required
                             />
-                            <span style={{fontWeight: "900"}}>Please, provide weight</span>
+                            <span style={{ fontWeight: "900" }}>Please, provide weight</span>
                         </div>
                     )}
                     {select.includes("Furniture") && (
@@ -208,12 +208,12 @@ export default function ProductAdd() {
                                 onChange={(e) => inputChange(e)}
                                 required
                             />
-                            <span style={{fontWeight: "900"}}>Please, provide dimensions</span>
+                            <span style={{ fontWeight: "900" }}>Please, provide dimensions</span>
                         </div>
                     )}
                 </Paper>  
                 {(errors.alert?.type !== 'required') ? <><span></span></> : 
-                (<><span style={{paddingLeft: "190px", fontWeight: "900", color: "red"}}>Please, submit required data</span></>)}
+                (<><span style={{ paddingLeft: "190px", fontWeight: "900", color: "red" }}>Please, submit required data</span></>)}
             </form>
             <Footer/>
         </>
