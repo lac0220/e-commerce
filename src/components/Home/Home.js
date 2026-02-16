@@ -97,7 +97,7 @@ export default function Home() {
                                     <div className="home-box">
                                         <div className="home-box-table">
                                             <p><strong>SKU: {item.sku}</strong></p>
-                                            <p style={{ color: "#055096" }}>{item.name}</p>
+                                            <p style={{ color: "#0054a3" }}>{item.name}</p>
                                             <p>{item.price} €</p>
                                             {item.size && <p>Size: {item.size} MB</p>}
                                             {item.weight && <p>Weight: {item.weight} kg</p>}

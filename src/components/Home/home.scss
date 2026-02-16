@@ -61,7 +61,6 @@
         div {
             margin: 0 auto 30px;
             height: 10rem;
-            min-width: 0;
         }
     }
 
@@ -94,6 +93,14 @@
 }
 
 @media (max-width: 415px) {
+
+    .home {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 415px) {
+
     .home-container {
         width: 300px;
     }
