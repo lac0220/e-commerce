@@ -3,19 +3,25 @@
 The web application contains two main functionalities:
 
 1. Listing all products from a Supabase database
+
 2. Adding a product with a unique SKU + additional details like name, price, size, height, width, length, and weight
 
 - Products can be deleted by selecting checkbox
+
 - The database is hosted on Supabase, a cloud PostgreSQL service with REST API support
 
 ## Tech Stack
 
 Front-End:
+
 - React.js
+
 - SCSS
 
 Bank-End:
+
 - Supabase (PostgreSQL)
+
 - REST API for CRUD operations 
 
 ## Setup
@@ -86,7 +92,7 @@ export const supabase = createClient(supabaseUrl, supabaseKey)
 ```
 ## Version
 
-1.0 - 18/12/2022 - Publishing of the website
+1.0 - 18/12/2022 - Initial release
 
 1.1 – 13/02/2026 – Migration to Supabase backend, removed PHP/MySQL dependency
 
