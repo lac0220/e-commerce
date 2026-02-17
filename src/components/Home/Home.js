@@ -23,7 +23,7 @@ export default function Home() {
                 .order('id', { ascending: true });
 
             if (error) {
-                alert("Error loading data");
+                alert("The server is temporarily unable to service your request. Your firewall might be blocking traffic.");
                 console.log(error);
             } else {
                 setData(data);
